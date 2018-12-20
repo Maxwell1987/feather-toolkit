@@ -17,4 +17,7 @@ services:
       MYSQL_ROOT_PASSWORD: secret
     restart: unless-stopped
     volumes:
-       - ./db-volume:/var/lib/mysql
+       - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

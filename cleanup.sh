@@ -1,5 +1,3 @@
-#!/bin/bash -xe
+#!/bin/bash -e
 
-docker-compose stop
-docker-compose rm
-rm -rf db-volume
+docker-compose down -v --rmi local
