@@ -48,12 +48,16 @@ git clone https://github.com/Maxwell1987/feather-toolkit.git .
 init.bat
 ```
 
-2. 若本机未安装 Git，创建一个空白目录，在空白目录中执行
+2. 若本机未安装 Git，创建一个新目录（可取名为 `feather-toolkit`），在该目录中执行
 ```
 docker image build --pull --tag feather_dev:latest https://github.com/Maxwell1987/feather-toolkit.git#:feather_dev
-docker container run -it --rm -v "$PWD":/opt feather_dev:latest
 docker image build --pull --tag feather_base:latest feather_base
 docker image pull mariadb:latest
+docker container run -it --rm -v "$PWD":/opt feather_dev:latest
+```
+Windows 系统上面最后一行改为
+```
+docker container run -it --rm -v "%~dp0":/opt feather_dev:latest
 ```
 以上操作皆需要在有网络的环境下运行。
 
