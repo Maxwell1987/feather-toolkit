@@ -33,3 +33,17 @@ docker image pull mariadb:latest
 ```
 upgrade.bat
 ```
+
+### 停止运行
+```
+docker-compose stop
+```
+
+### 清理环境
+```
+./cleanup.sh
+```
+或
+```
+cleanup.sh
+```
