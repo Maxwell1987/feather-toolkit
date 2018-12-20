@@ -17,7 +17,7 @@ init.bat
 2. 若本机未安装 Git，创建一个空白目录，在空白目录中执行
 ```
 docker image build --pull --tag feather_dev:latest https://github.com/Maxwell1987/feather-toolkit.git#:feather_dev
-docker container run -it --rm -v $PWD:/opt feather_dev:latest
+docker container run -it --rm -v "$PWD":/opt feather_dev:latest
 docker image build --pull --tag feather_base:latest feather_base
 docker image pull mariadb:latest
 ```
@@ -34,9 +34,23 @@ docker image pull mariadb:latest
 upgrade.bat
 ```
 
+访问地址
+```
+http://localhost:8080/
+```
+首次访问时先从
+```
+http://localhost:8080/sign_out_page
+```
+创建用户
+
 ### 停止运行
 ```
-docker-compose stop
+./shutdown.sh
+```
+或
+```
+shutdown.sh
 ```
 
 ### 清理环境
