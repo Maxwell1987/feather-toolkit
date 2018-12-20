@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-COPY ./entrypoint.sh /
-
 RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsinghua.edu.cn\/ubuntu\//g' /etc/apt/sources.list \
   && sed -i 's/http:\/\/security\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsinghua.edu.cn\/ubuntu\//g' /etc/apt/sources.list \
   && apt-get update \
@@ -18,5 +16,7 @@ RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsingh
         uuid-dev \
         zlib1g-dev \
   && rm -rf /var/lib/apt/lists/*
+
+COPY ./entrypoint.sh /
 
 ENTRYPOINT ["bash", "./entrypoint.sh"]
