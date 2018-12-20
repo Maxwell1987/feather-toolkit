@@ -1,11 +1,11 @@
 #!/bin/bash -xe
 
-if [ ! -f init.sh ]; then
+if [ ! -f /opt/init.sh ]; then
   cd /opt
   git clone https://github.com/Maxwell1987/feather-toolkit.git .
 fi
 
-if [ ! -f feather/README.md ]; then
+if [ ! -f /opt/feather/README.md ]; then
   cd /opt
   git clone https://github.com/qicosmos/feather
   cd feather

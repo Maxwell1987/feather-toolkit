@@ -27,9 +27,9 @@ docker image pull mariadb:latest
 
 ### 编译运行
 ```
-./build.sh
+./upgrade.sh
 ```
 或
 ```
-build.bat
+upgrade.bat
 ```

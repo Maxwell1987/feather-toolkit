@@ -1,4 +1,4 @@
-FROM feather_run:latest
+FROM feather_base:latest
 
 COPY feather/build/feather /opt/feather/
 COPY feather/purecpp /opt/feather/purecpp
