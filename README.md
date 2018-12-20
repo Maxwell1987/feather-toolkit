@@ -14,10 +14,12 @@ init.bat
 ```
 以上脚本需要在有网络的环境下运行
 
-2. 若本机未安装 Git，运行
+2. 若本机未安装 Git，创建一个空白目录，在空白目录中执行
 ```
-docker image build --tag feather_dev:latest https://github.com/Maxwell1987/feather-toolkit.git#:feather_dev
+docker image build --pull --tag feather_dev:latest https://github.com/Maxwell1987/feather-toolkit.git#:feather_dev
 docker container run -it --rm -v $PWD:/opt feather_dev:latest
+docker image build --pull --tag feather_base:latest feather_base
+docker image pull mariadb:latest
 ```
 
 ### 修改代码
