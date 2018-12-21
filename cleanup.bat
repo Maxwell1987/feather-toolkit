@@ -1,5 +1,4 @@
 @echo off
 
-docker-compose stop
-docker-compose rm
-del /a /f /q db-volume
+docker-compose down -v --rmi local
+docker image rm feather_base feather_dev
