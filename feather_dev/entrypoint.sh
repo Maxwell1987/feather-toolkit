@@ -13,6 +13,8 @@ if [ ! -f /opt/feather/README.md ]; then
   mkdir build
 fi
 
-cd /opt/feather/build
-cmake ..
-make CXX_FLAGS+="-std=c++17"
+if [ $# == 0 ]; then
+  cd /opt/feather/build
+  cmake ..
+  make CXX_FLAGS+="-std=c++17"
+fi

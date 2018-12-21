@@ -35,11 +35,15 @@ https://docs.docker.com/install/
 ```
 
 ### 初始化环境
-1. 若本机已安装 Git，创建一个新目录（可取名为 `feather-toolkit`），在该目录中执行
+新建一个目录，使用
 ```
 git clone https://github.com/Maxwell1987/feather-toolkit.git .
 ```
-将 feather-toolkit clone 到本地，然后执行
+将 feather-toolkit clone 到本地，或者使用
+```
+https://github.com/Maxwell1987/feather-toolkit/archive/master.zip
+```
+下载文件并展开到目录中，执行
 ```
 ./init.sh
 ```
@@ -48,18 +52,7 @@ git clone https://github.com/Maxwell1987/feather-toolkit.git .
 init.bat
 ```
 
-2. 若本机未安装 Git，创建一个新目录（可取名为 `feather-toolkit`），在该目录中执行
-```
-docker image build --pull --tag feather_dev:latest https://github.com/Maxwell1987/feather-toolkit.git#:feather_dev
-docker image build --pull --tag feather_base:latest feather_base
-docker image pull mariadb:latest
-docker container run -it --rm -v "$PWD":/opt feather_dev:latest
-```
-Windows 系统上面最后一行改为
-```
-docker container run -it --rm -v "%~dp0":/opt feather_dev:latest
-```
-以上操作皆需要在有网络的环境下运行。
+以上操作需要在有网络的环境下运行。
 
 ### 修改代码
 使用自己熟悉的编译器编辑 ./feather 目录下的代码
