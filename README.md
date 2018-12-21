@@ -14,7 +14,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-compose
 sudo usermod -aG docker $USER
 ```
-更多信息见
+以上步骤操作完之后需注销再登录或者重启系统。更多信息见
 ```
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 https://docs.docker.com/compose/install/
