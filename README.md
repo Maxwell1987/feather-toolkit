@@ -3,7 +3,7 @@
 
 本环境适用于需要快速简单修改代码的场景，如果为了修改少量代码而安装一套可成功编译、运行、调试的环境性价比很低。而使用本环境则只需要有文本编辑器就可以完成编译、运行的工作。
 
-### 安装 Docker
+### 安装 Docker 和 Docker Compose
 
 1. Ubuntu
 ```
@@ -11,12 +11,13 @@ sudo apt-get remove docker docker-engine docker.io
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
-sudo apt-get install docker-ce
+sudo apt-get install docker-ce docker-compose
 sudo usermod -aG docker $USER
 ```
 更多信息见
 ```
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
+https://docs.docker.com/compose/install/
 ```
 
 2. macOS
@@ -32,6 +33,7 @@ https://hub.docker.com/editions/community/docker-ce-desktop-windows
 4. 其它系统
 ```
 https://docs.docker.com/install/
+https://docs.docker.com/compose/install/
 ```
 
 ### 初始化环境
@@ -93,3 +95,6 @@ shutdown.sh
 ```
 cleanup.sh
 ```
+
+## 致谢
+As.xjc
