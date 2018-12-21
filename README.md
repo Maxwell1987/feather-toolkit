@@ -84,7 +84,7 @@ http://localhost:8080/sign_out_page
 ```
 或
 ```
-shutdown.sh
+shutdown.bat
 ```
 
 ### 清理环境
@@ -93,7 +93,7 @@ shutdown.sh
 ```
 或
 ```
-cleanup.sh
+cleanup.bat
 ```
 
 ## 致谢
