@@ -8,8 +8,7 @@ RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsingh
         gcc-8 \
         g++-8 \
         git \
-        libboost-filesystem-dev \
-        libboost-system-dev \
+        libboost-all-dev \
         libmysqlclient-dev \
         libpqxx-dev \
         make \
