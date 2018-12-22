@@ -6,8 +6,10 @@ RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsingh
   && apt-get -y install \
         cmake \
         gcc-8 \
+        g++-8 \
         git \
-        libboost-all-dev \
+        libboost-filesystem-dev \
+        libboost-system-dev \
         libmysqlclient-dev \
         libpqxx-dev \
         make \
@@ -15,7 +17,8 @@ RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsingh
         sqlite \
         uuid-dev \
         zlib1g-dev \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 
 COPY ./entrypoint.sh /
 
