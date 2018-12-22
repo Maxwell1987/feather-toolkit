@@ -5,7 +5,7 @@ RUN sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu/http:\/\/mirrors.tuna.tsingh
   && apt-get update \
   && apt-get -y install \
         cmake \
-        gcc \
+        gcc-8 \
         git \
         libboost-all-dev \
         libmysqlclient-dev \
